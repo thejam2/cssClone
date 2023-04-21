@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import styled from "styled-components";
+import { url } from "inspector";
 
 const Head = styled.div`
   position: fixed;
@@ -60,6 +61,10 @@ const Head = styled.div`
         margin: 0px 14px 0.25em 0px;
         font-size: 15px;
         font-weight: 600;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+        }
       }
 
       p {
@@ -72,11 +77,33 @@ const Head = styled.div`
   }
 `;
 
-const Test = styled.div`
+const RightArea = styled.div`
   min-width: 100vh;
   min-height: 100vh;
   background-color: #e7473c;
   padding-left: 33%;
+`;
+
+const Section = styled.div`
+  padding: 135px;
+  height: 100%;
+  background-image: linear-gradient(0deg,rgba(0,0,0,.08),transparent);
+  img {
+    width: 500px;
+    height: 500px;
+  }
+`;
+
+const Title = styled.h1`
+  color: white;
+  font-size: 3rem;
+`;
+
+const Img = styled.div`
+  width: 100%;
+  min-height: 800px;
+  background-image: url(/poster.png);
+  background-size: cover;
 `;
 
 function App() {
@@ -123,7 +150,20 @@ function App() {
           </div>
         </div>
       </Head>
-      <Test>test</Test>
+      <RightArea>
+        <Section>
+          <Title>38. Hereditary (2018)</Title>
+          <Img />
+        </Section>
+        <Section>
+          <Title>38. Hereditary (2018)</Title>
+          <Img />
+        </Section>
+        <Section>
+          <Title>38. Hereditary (2018)</Title>
+          <Img />
+        </Section>
+      </RightArea>
     </>
   );
 }
