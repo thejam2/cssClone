@@ -7,7 +7,15 @@ const Head = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 33%;
+  @media screen and (min-width: 1610px) {
+    width: 33%;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1609px) {
+    width: 600px;
+  }
+  @media screen and (min-width: 840px) and (max-width: 1199px) {
+    width: 420px;
+  }
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,12 +26,15 @@ const Head = styled.div`
     sans-serif;
   h1 {
     margin: 0px;
-    font-size: 80px;
+    font-size: 7.2rem;
     padding: 10vh 0px 0px 72px;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: 100;
     line-height: 0.9;
+    @media (min-width: 840px) and (max-width: 1199px) {
+      font-size: 5rem;
+    }
   }
 
   h3 {
@@ -33,9 +44,16 @@ const Head = styled.div`
 
   .bottom {
     padding: 72px;
+    font-size: 1.5rem;
+    @media (min-width: 840px) and (max-width: 1199px) {
+      max-width: 100%;
+    }
     .bottomDiv {
       max-width: 480px;
-      width: 80%;
+      
+      @media (min-width: 1200px){
+        width: 80%;
+    }
     }
     h3 {
       font-size: 1.6em;
@@ -78,16 +96,32 @@ const Head = styled.div`
 `;
 
 const RightArea = styled.div`
-  min-width: 100vh;
   min-height: 100vh;
   background-color: #e7473c;
-  padding-left: 33%;
+  @media screen and (min-width: 1610px) {
+    padding-left: 33%;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1609px) {
+    padding-left: 600px;
+  }
+  @media screen and (min-width: 840px) and (max-width: 1199px) {
+    padding-left: 420px;
+  }
 `;
 
 const Section = styled.div`
-  padding: 135px;
+  @media screen and (min-width: 1610px) {
+    padding: 135px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1609px) {
+    padding: 72px;
+  }
+  @media screen and (min-width: 840px) and (max-width: 1199px) {
+    font-size: 1.5rem;
+    padding: 54px 48px;
+  }
   height: 100%;
-  background-image: linear-gradient(0deg,rgba(0,0,0,.08),transparent);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.08), transparent);
   img {
     width: 500px;
     height: 500px;
@@ -101,10 +135,12 @@ const Title = styled.h1`
 
 const Img = styled.div`
   width: 100%;
-  min-height: 800px;
+  padding-top: 56.25%;
   background-image: url(/poster.png);
   background-size: cover;
 `;
+
+const Test = styled.div``;
 
 function App() {
   return (
